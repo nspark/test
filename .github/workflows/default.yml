@@ -26,5 +26,6 @@ jobs:
         path: rand_num.out
     - name: Webhook Action
       uses: joelwmale/webhook-action@1.0.0
-      with:
+      env:
+        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
         data: "{'deployment': 'finished', 'project': 'actions'}"
