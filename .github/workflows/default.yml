@@ -20,12 +20,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        # Artifact name
-        name: artifact_rand_num
-        # Directory containing files to upload
+        name: random-${{ github.sha }}
         path: rand_num.out
-    # - name: Webhook Action
-    #   uses: joelwmale/webhook-action@1.0.0
-    #   env:
-    #     WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-    #     data: "{'deployment': 'finished', 'project': 'actions'}"
