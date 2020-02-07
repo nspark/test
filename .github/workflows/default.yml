@@ -24,8 +24,8 @@ jobs:
         name: artifact_rand_num
         # Directory containing files to upload
         path: rand_num.out
-    - name: Webhook Action
-      uses: joelwmale/webhook-action@1.0.0
-      env:
-        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-        data: "{'deployment': 'finished', 'project': 'actions'}"
+    # - name: Webhook Action
+    #   uses: joelwmale/webhook-action@1.0.0
+    #   env:
+    #     WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+    #     data: "{'deployment': 'finished', 'project': 'actions'}"
