@@ -16,7 +16,7 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
     - name: Make artifact
-      run: echo $RANDOM >> rand_num.out
+      run: echo ${{ github.sha }} >> rand_num.out
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
