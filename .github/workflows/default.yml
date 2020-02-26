@@ -17,11 +17,11 @@ jobs:
         echo test, and deploy your project.
     - name: Make artifact
       run: |
-        echo ${{ github.sha }} >> rand_num.out
+        echo ${{ github.event.pull_request.head.sha }} >> rand_num.out
         echo                   >> rand_num.out
         git log -n 5           >> rand_num.out
     - name: Upload artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: random-${{ github.sha }}
+        name: random-${{ github.event.pull_request.head.sha }}
         path: rand_num.out
